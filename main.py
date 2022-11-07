@@ -3,7 +3,7 @@
 import art
 import time
 
-# Menu
+# Menu text for selection
 def getMenu():
     print("1. Cyber")
     print("2. Race")
@@ -15,14 +15,16 @@ def getMenu():
     print("8. Ladybug")
     print("Type 1-8 in the console to launch a prompt, or 0 to quit")
 
-# title card
+#---------- Main progression starts here ----------
+
+# Title card
 art.tprint("Welcome to The Amazing Console!")
 
-# prompts
+# Prompts
 print("The prompts for this console are...")
 time.sleep(3)
 
-# give options
+# Give options
 end = 0
 while(end != 1):
     getMenu()
