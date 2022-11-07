@@ -31,35 +31,34 @@ while(end != 1):
     user_in = input("I Choose: ")
 
     if(user_in.isnumeric):
-        match user_in:
-            case "1":
+            if user_in == "1":
                 # your main function here!!!
                 pass
-            case "2":
+            elif user_in == "2":
                 # your main function here!!!
                 pass
-            case "3":
+            elif user_in == "3":
                 # your main function here!!!
                 pass
-            case "4":
+            elif user_in == "4":
                 # your main function here!!!
                 pass
-            case "5":
+            elif user_in == "5":
                 # your main function here!!!
                 pass
-            case "6":
+            elif user_in == "6":
                 # your main function here!!!
                 pass
-            case "7":
+            elif user_in == "7":
                 # your main function here!!!
                 pass
-            case "8":
+            elif user_in == "8":
                 # your main function here!!!
                 pass
-            case "9":
+            elif user_in == "9":
                 # your main function here!!!
                 pass
-            case "0":
+            else:
                 end = 1
                 print("Goodbye!")
                 pass
