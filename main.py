@@ -2,6 +2,10 @@
 # import mycode.py
 import art
 import time
+import cyber
+
+# initialize Objects
+cyber_game = cyber.Character()
 
 # Menu text for selection
 def getMenu():
@@ -33,7 +37,7 @@ while(end != 1):
     if(user_in.isnumeric):
             if user_in == "1":
                 # your main function here!!!
-                pass
+                cyber_game.run()
             elif user_in == "2":
                 # your main function here!!!
                 pass
