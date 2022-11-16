@@ -2,6 +2,7 @@ import time
 
 import art
 import os
+import Character
 
 
 class CyberCharacterCreator:
@@ -25,8 +26,7 @@ class CyberCharacterCreator:
 
         if (user_in.isnumeric):
             if user_in == "1":
-                # your main function here!!!
-                pass
+                self.characters.append(Character())
             elif user_in == "2":
                 # your main function here!!!
                 pass
