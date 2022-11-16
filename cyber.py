@@ -5,9 +5,10 @@ import os
 
 
 class CyberCharacterCreator:
-    running = True
+
     def __init__(self):
         self.characters = []
+        self.running = True
 
     def menu(self):
         #  Display menu
@@ -32,24 +33,7 @@ class CyberCharacterCreator:
             elif user_in == "3":
                 # your main function here!!!
                 pass
-            elif user_in == "4":
-                # your main function here!!!
-                pass
-            elif user_in == "5":
-                # your main function here!!!
-                pass
-            elif user_in == "6":
-                # your main function here!!!
-                pass
-            elif user_in == "7":
-                # your main function here!!!
-                pass
-            elif user_in == "8":
-                # your main function here!!!
-                pass
-            elif user_in == "9":
-                # your main function here!!!
-                pass
+
             elif user_in == "0":
                 self.running = False
             else:
