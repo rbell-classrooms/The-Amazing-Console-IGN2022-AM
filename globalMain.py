@@ -1,12 +1,9 @@
-import time
 def main():
     # Backstory
 
     print("""
 [Transmission Start]
-    """)
-    time.sleep(1)
-    print("""
+
 Welcome, new recruit! As a part of PlanetPurge, Incorporated, we welcome you to the process of
 protecting the safety and well-being of our fellow kind by eliminating all threats necessary. 
     """)
@@ -39,36 +36,13 @@ The right choices will lead to salvation of the hostages.
     waitForInput()
     print("""
 We wish you luck on your mission, recruit. Oh, and the hostages are being kept at a place called-
-    """)
-    waitForInput()
-    print("""
+
 [Transmission End]
     """)
-    time.sleep(1)
-
-    if levelOne() == 0:
-
-        return
-
     waitForInput()
 
-    if levelTwo() == 0:
-
+    if levelOne()==0 or levelTwo()==0 or levelThree()==0 or levelFour()==0:
         return
-
-    waitForInput()
-
-    if levelThree() == 0:
-
-        return
-
-    waitForInput()
-
-    if levelFour() == 0:
-
-        return
-
-    waitForInput()
 
 def waitForInput():
     input("Press enter to continue...")
@@ -106,40 +80,53 @@ creatures at site A, and is able to produce an abnormally loud call with their v
 An anonymous news headline reads:
 “Military operation involving llamas, chief of defense gets spit in eye”
     """)
-    waitForInput()
-    #print("Choose location ‘A’, ‘B’, ‘C’, or ‘D’: ", end="")
 
-    bombs = 3
-    win = 0
-    while win == 0 and bombs > 0:
-        print("You have " + str(bombs) + " bombs.")
-        loc = input("Where will you send a nuclear bomb? ")
-        if loc == "1":
-            bombs = bombs - 1
-            print("You choose the wrong spot!")
-        elif loc == "2":
-            bombs = bombs - 1
-            print("You choose the wrong spot!")
-        elif loc == "3":
-            win = 1
-            print("You choose the RIGHT spot!")
-        elif loc == "4":
-            bombs = bombs - 1
-            print("You choose the wrong spot!")
+    userIn = input("Choose location ‘A’, ‘B’, ‘C’, or ‘D’: ").upper()
 
-    if win != 1:
-        print("You lost and got blown up!")
+    while userIn not in ["A", "B", "C", "D"]:
+        print("Invalid Response...")
+        userIn = input("Choose location ‘A’, ‘B’, ‘C’, or ‘D’: ").upper()
 
-    return win
+    if userIn == "C":
+        print("""
+[Transmission Start]
+
+You chose to detonate site C. Interesting choice...
+""")
+        waitForInput()
+        print("""
+Our field operators found this to be an excellent choice. This terrain seemed to be hiding some
+of the planet’s crucial defenses in plain sight, and the detonation eliminated many valuable
+resources. The planet seems to be speculative of this incident, indicating that they believe
+this was an inside job. Well done, recruit.
+
+[Transmission End]
+        """)
+        waitForInput()
+        return 1
+    else:
+        print("""
+[Transmission Start]
+
+You chose to detonate site """ + userIn + """. Interesting choice...
+""")
+        waitForInput()
+        print("""
+Our field operators found this to be a poor choice. The planet paid no attention to this effort
+as the remains were deemed to be a space anomaly. Many once unfriendly nations are now forming a
+pact to discover the outer extents of their solar system. The mission is now being called off.
+Goodbye.
+
+[Transmission End]
+        """)
+        waitForInput()
+        return 0
 
 def levelTwo():
-    win = 0
-    return win
+    return 0
 
 def levelThree():
-    win = 0
-    return win
+    return 0
 
 def levelFour():
-    win = 0
-    return win
+    return 0
