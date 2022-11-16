@@ -1,33 +1,54 @@
+import time
 def main():
     # Backstory
     print("""
-            [Transmission Start]
-
+        [Transmission Start]
+    """)
+    time.sleep(1)
+    print("""
             Welcome, new recruit! As a part of PlanetPurge, Incorporated, we welcome you to the process of
             protecting the safety and well-being of our fellow kind by eliminating all threats necessary. 
-
+    """)
+    time.sleep(5)
+    waitForInput()
+    print("""
             Your first mission is to address the troublesome planet 152-Z of sector 4, which has mercilessly
             enslaved some of our kind for their own sickening curiosity. We would have dealt with them by now,
             however, they have built up quite the arsenal of destructive weaponry. This weaponry, while infused
             with radioactive products to which we are immune, has fiery and explosive capabilities that would
             surely destroy all of our best fleets.
-
+    """)
+    time.sleep(10)
+    waitForInput()
+    print("""
             Your goal is to strategically take out this planet’s best defenses, in disguise of their own weapons.
             This may seem counterintuitive, but this particular planet is one of the few that has not yet
             established world peace, having formed a network of aggressions towards each other. Only a few nuclear
             events and the entire planet would turn on each other, ensuring mass destruction.
-
+    """)
+    time.sleep(10)
+    waitForInput()
+    print("""
             This is where you come in. You need to select from the different strategic locations that our head of
             defense has narrowed down as priority targets to determine which one is of the highest threat.
-
+    """)
+    time.sleep(5)
+    waitForInput()
+    print("""
             There will be four trials, each of which a missile sent down to the chosen location to be detonated.
             The wrong choice will surely lead to aggression from the planet and may ensue mass damages to our fleets.
             The right choices will lead to salvation of the hostages.
-
+    """)
+    time.sleep(5)
+    waitForInput()
+    print("""
             We wish you luck on your mission, recruit. Oh, and the hostages are being kept at a place called-
-
+    """)
+    time.sleep(1)
+    print("""
             [Transmission End]
     """)
+    time.sleep(1)
 
     waitForInput()
 
@@ -56,7 +77,7 @@ def main():
     waitForInput()
 
 def waitForInput():
-    input("\nType any letter7 to continue...\n")
+    input("\nType any letter to continue...\n")
 
 def levelOne():
     print("There are four fields with creatures.\nOne is a military base.")
