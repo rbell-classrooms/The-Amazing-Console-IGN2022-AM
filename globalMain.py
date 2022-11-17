@@ -189,31 +189,104 @@ tensions that previously existed. The mission is now being called off. Goodbye.
 
 def levelThree():
     print("""
-The third transcript you receive reads:
+    The third transcript you receive reads:
 
-There are three more locations of equally determined hostility.
-Each location is a possible host of civilian residents.
+    There are three more locations of equally determined hostility.
+    Each location is a possible host of civilian residents.
+        """)
+    waitForInput()
+    print("""
+    Location A has a grid of tall, windowed structures.
+    At the base of these structures lie various marketplaces.
+        """)
+    waitForInput()
+    print("""
+    Location B has various groups of squared-off housing units that
+    look nearly identical. Long, winding paths connect these units together.
+        """)
+    waitForInput()
+    print("""
+    Location C has similar features to site A, lacking the marketplaces
+    at the bottom. Instead, they have a staircase that spirals up to
+    connect each floor.
+        """)
+    waitForInput()
+    print("""
+    An anonymous news headline reads:
+    “Strange sounds reported in suburban neighborhood may indicate military presence”
+        """)
+
+    userIn = input("Choose location ‘A’, ‘B’, ‘C’: ").upper()
+    while userIn not in ["A", "B", "C"]:
+        print("Invalid Response...")
+        userIn = input("Choose location ‘A’, ‘B’, ‘C’: ").upper()
+
+    if userIn == "B":
+        print("""
+    [Transmission Start]
+
+    You chose to detonate site B. Interesting choice...
+                """)
+        waitForInput()
+        print("""
+    Our field operators found this to be an excellent choice. This site seemed
+    to contain a well-established military environment that was exposed after
+    detonation. The planet residents are growing even more suspicious of each
+    other, turning on their closest allies. Well done, recruit.
+
+    [Transmission End]
+                """)
+        waitForInput()
+        return 1
+    else:
+        print("""
+    [Transmission Start]
+
+    You chose to detonate site """ + userIn + """. Interesting choice...
+            """)
+        waitForInput()
+        print("""
+    Our field operators found this to be a poor choice. The planet found this
+    to be a great tragedy, as many of their civilian kind were wiped out. Many
+    are focused on repairing the damage done, collaborating in an effort to
+    establish a more peaceful planet. The mission is now being called off. Goodbye.
+
+    [Transmission End]
+                    """)
+        waitForInput()
+        return 0
+
+def levelFour():
+    print("""
+The fourth transcript you receive reads:
+
+There are three final locations, each of which are equally likely
+to host a prison of our kind, and the other two contain weapons of
+mass destruction. Determine which location to save, and the other
+two will be detonated.
     """)
     waitForInput()
     print("""
-Location A has a grid of tall, windowed structures.
-At the base of these structures lie various marketplaces.
+Location A is a large, fairly flat surface of terrain that the main
+locals residing there have dubbed as “Ohio.” Many of the planet’s
+residents do not believe it exists.
     """)
     waitForInput()
     print("""
-Location B has various groups of squared-off housing units that
-look nearly identical. Long, winding paths connect these units together.
+Location B is an equally large section of seawater, greatly feared
+by the planet’s residents. Its reach has been determined to have a
+triangular shape.
     """)
     waitForInput()
     print("""
-Location C has similar features to site A, lacking the marketplaces
-at the bottom. Instead, they have a staircase that spirals up to
-connect each floor.
+Location C is a small storage facility, located among deserted terrain.
+Many of the planet’s are not sure what the storage facility contains,
+despite its popularity.
     """)
     waitForInput()
     print("""
-An anonymous news headline reads:
-“Strange sounds reported in suburban neighborhood may indicate military presence”
+An anonymous news headline rea□□:
+□□□e□□□ □□□□ □□s□□□□□ □□□□□□d□ □□□□□□ □□□m□□□□
     """)
 
     userIn = input("Choose location ‘A’, ‘B’, ‘C’: ").upper()
@@ -225,14 +298,16 @@ An anonymous news headline reads:
         print("""
 [Transmission Start]
 
-You chose to detonate site B. Interesting choice...
+You chose to save site C. Interesting choice...
             """)
         waitForInput()
         print("""
-Our field operators found this to be an excellent choice. This site seemed
-to contain a well-established military environment that was exposed after
-detonation. The planet residents are growing even more suspicious of each
-other, turning on their closest allies. Well done, recruit.
+Our field operators found this to be an excellent choice. The destruction of these
+two locations prompted a feud between world leaders, leading to the initialization
+of their defense systems. Our field operators safely retrieved the hostages from
+the storage facility while the planet was distracted by its own impending doom.
+
+Mission success. Well done, recruit.
 
 [Transmission End]
             """)
@@ -242,19 +317,17 @@ other, turning on their closest allies. Well done, recruit.
         print("""
 [Transmission Start]
 
-You chose to detonate site """ + userIn + """. Interesting choice...
+You chose to save site """ + userIn + """. Interesting choice...
         """)
         waitForInput()
         print("""
-Our field operators found this to be a poor choice. The planet found this
-to be a great tragedy, as many of their civilian kind were wiped out. Many
-are focused on repairing the damage done, collaborating in an effort to
-establish a more peaceful planet. The mission is now being called off. Goodbye.
+Our field operators found this to be a poor choice. The planet saw the
+detonation sites as strange behavior that required planet-wide investigation.
+Many on the planet believe this pursuit for other life may lead to the
+establishment of world peace. Furthermore, contact was lost with the hostages
+residing on this planet. The mission is now being called off. Goodbye.
 
 [Transmission End]
-                """)
+        """)
         waitForInput()
         return 0
-
-def levelFour():
-    return 0
