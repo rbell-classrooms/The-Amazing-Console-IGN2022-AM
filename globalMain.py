@@ -287,7 +287,7 @@ despite its popularity.
     waitForInput()
     print("""
 An anonymous news headline rea□□:
-□□□e□□□ □□□□ □□s□□□□□ □□□□□□d□ □□□□□□ □□□m□□□□
+□□□e□ 5□ □□□□□□□□d t□ □□s□ □□i□□ □□□□□m□n□
     """)
 
     userIn = input("Choose location ‘A’, ‘B’, ‘C’: ").upper()
