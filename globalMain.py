@@ -1,4 +1,11 @@
 def main():
+    printBackstory()
+    waitForInput()
+
+    if levelOne()==0 or levelTwo()==0 or levelThree()==0 or levelFour()==0:
+        return
+
+def printBackstory():
     print("""
 [Transmission Start]
 
@@ -37,10 +44,6 @@ We wish you luck on your mission, recruit. Oh, and the hostages are being kept a
 
 [Transmission End]
     """)
-    waitForInput()
-
-    if levelOne()==0 or levelTwo()==0 or levelThree()==0 or levelFour()==0:
-        return
 
 def waitForInput():
     input("Press enter to continue...")
