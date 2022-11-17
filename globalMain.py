@@ -82,7 +82,6 @@ An anonymous news headline reads:
     """)
 
     userIn = input("Choose location ‘A’, ‘B’, ‘C’, or ‘D’: ").upper()
-
     while userIn not in ["A", "B", "C", "D"]:
         print("Invalid Response...")
         userIn = input("Choose location ‘A’, ‘B’, ‘C’, or ‘D’: ").upper()
@@ -123,7 +122,70 @@ Goodbye.
         return 0
 
 def levelTwo():
-    return 0
+    print("""
+The second transcript you receive reads:
+
+There are three more locations of equally determined hostility.
+Each location is a structure of peculiarly shaped architecture.
+    """)
+    waitForInput()
+    print("""
+Location A has a large, ball-like structure heading the foundation.
+The overall structure appears to be made out of some sort of metal.
+    """)
+    waitForInput()
+    print("""
+Location B has a triangular shaped roofing unit. This structure appears
+to be composed of a stone-like substance.
+    """)
+    waitForInput()
+    print("""
+Location C has a roof shaped similar to that of a prism. The main
+material utilized appears to be some sort of transparent, glass-like substance.
+    """)
+    waitForInput()
+    print("""
+An anonymous news headline reads:
+“Steel prices skyrocket as military sanctions off 60% of the industry”
+    """)
+
+    userIn = input("Choose location ‘A’, ‘B’, ‘C’: ").upper()
+    while userIn not in ["A", "B", "C"]:
+        print("Invalid Response...")
+        userIn = input("Choose location ‘A’, ‘B’, ‘C’: ").upper()
+
+    if userIn == "A":
+        print("""
+[Transmission Start]
+
+You chose to detonate site A. Interesting choice...
+        """)
+        waitForInput()
+        print("""
+Our field operators found this to be an excellent choice. This site seemed to host
+newer developments of the planet's defense. Its destruction led to an increase in
+tensions between the planet's residents. Well done, recruit.
+
+[Transmission End]
+        """)
+        waitForInput()
+        return 1
+    else:
+        print("""
+[Transmission Start]
+
+You chose to detonate site """ + userIn + """. Interesting choice...
+    """)
+        waitForInput()
+        print("""
+Our field operators found this to be a poor choice. The planet found this to be an act
+of some higher being, having formed a new religion for this being, and alleviating the
+tensions that previously existed. The mission is now being called off. Goodbye.
+
+[Transmission End]
+            """)
+        waitForInput()
+        return 0
 
 def levelThree():
     return 0
