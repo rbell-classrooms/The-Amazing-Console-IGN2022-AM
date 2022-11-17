@@ -188,7 +188,73 @@ tensions that previously existed. The mission is now being called off. Goodbye.
         return 0
 
 def levelThree():
-    return 0
+    print("""
+The third transcript you receive reads:
+
+There are three more locations of equally determined hostility.
+Each location is a possible host of civilian residents.
+    """)
+    waitForInput()
+    print("""
+Location A has a grid of tall, windowed structures.
+At the base of these structures lie various marketplaces.
+    """)
+    waitForInput()
+    print("""
+Location B has various groups of squared-off housing units that
+look nearly identical. Long, winding paths connect these units together.
+    """)
+    waitForInput()
+    print("""
+Location C has similar features to site A, lacking the marketplaces
+at the bottom. Instead, they have a staircase that spirals up to
+connect each floor.
+    """)
+    waitForInput()
+    print("""
+An anonymous news headline reads:
+“Strange sounds reported in suburban neighborhood may indicate military presence”
+    """)
+
+    userIn = input("Choose location ‘A’, ‘B’, ‘C’: ").upper()
+    while userIn not in ["A", "B", "C"]:
+        print("Invalid Response...")
+        userIn = input("Choose location ‘A’, ‘B’, ‘C’: ").upper()
+
+    if userIn == "B":
+        print("""
+[Transmission Start]
+
+You chose to detonate site B. Interesting choice...
+            """)
+        waitForInput()
+        print("""
+Our field operators found this to be an excellent choice. This site seemed
+to contain a well-established military environment that was exposed after
+detonation. The planet residents are growing even more suspicious of each
+other, turning on their closest allies. Well done, recruit.
+
+[Transmission End]
+            """)
+        waitForInput()
+        return 1
+    else:
+        print("""
+[Transmission Start]
+
+You chose to detonate site """ + userIn + """. Interesting choice...
+        """)
+        waitForInput()
+        print("""
+Our field operators found this to be a poor choice. The planet found this
+to be a great tragedy, as many of their civilian kind were wiped out. Many
+are focused on repairing the damage done, collaborating in an effort to
+establish a more peaceful planet. The mission is now being called off. Goodbye.
+
+[Transmission End]
+                """)
+        waitForInput()
+        return 0
 
 def levelFour():
     return 0
