@@ -8,13 +8,15 @@ class Character:
         self.race = ""
         self.set_race()
         #  Disabled style until further notice
-        #  self.style = ""
-        #  self.set_style()
+        self.style = ""
+        self.set_style()
 
         #  Sudo random attributes
         self.id = self.randomize_int(0, 99999)
         self.age = self.randomize_int(0, 200)
-        self.attributes = {"strength": 0, "Health": 0, "intelligence": 0, "dexterity": 0, "wisdom": 0, "charisma": 0}
+
+        #  Values should be 1-10
+        self.attributes = {"strength": 0, "intelligence": 0, "dexterity": 0, "wisdom": 0, "charisma": 0}
 
         # attribute dependent characteristics
         self.weapons = []
@@ -23,35 +25,28 @@ class Character:
 
     def set_race(self):
         selection = input("Please pick a race. %s: " % CyberData.races)
+        is_set = False
+        for key in list(CyberData.races.values()):
+            value = key[0]
+            if selection == value:
+                self.race = list(CyberData.races.items())[int(value) - 1]
+                is_set = True
 
-        if selection == "1":
-            self.race = "cyber"
-        elif selection == "2":
-            self.race = "cyborg"
-        elif selection == "3":
-            self.race = "hybrid"
-        elif selection == "4":
-            self.race = "enhanced"
-        elif selection == "5":
-            self.race = "human"
-        else:
+        if not is_set:
             self.set_race()
 
-    # def set_style(self):
-    #     selection = input("Please pick a race. Cyber(1), Cyborg(2), Hybrid(3), Enhanced(4), None(5): ")
-    #
-    #     if selection == "1":
-    #         self.race = "cyber"
-    #     elif selection == "2":
-    #         self.race = "cyborg"
-    #     elif selection == "3":
-    #         self.race = "hybrid"
-    #     elif selection == "4":
-    #         self.race = "enhanced"
-    #     elif selection == "5":
-    #         self.race = "human"
-    #     else:
-    #         self.set_race()
+    def set_style(self):
+        selection = input("Please pick a style. %s: " % CyberData.style)
+        is_set = False
+        for key in list(CyberData.style.values()):
+            value = key[0]
+            if selection == value:
+                self.race = list(CyberData.style.items())[int(value) - 1]
+                is_set = True                                            
+
+            if not is_set:
+                self.set_style()
+
 
     def get_attributes(self):
         return self.attributes
