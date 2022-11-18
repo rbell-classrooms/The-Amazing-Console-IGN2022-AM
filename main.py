@@ -10,7 +10,7 @@ def getMenu():
     print("3. Find X")
     print("4. Luck")
     print("5. Secret")
-    print("6. Fish")
+    print("6. F I S H")
     print("7. Global")
     print("8. Ladybug")
     print("Type 1-8 in the console to launch a prompt, or 0 to quit")
