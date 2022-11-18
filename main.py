@@ -1,7 +1,7 @@
 # Import your files here!
 # import mycode.py
 import art
-import time
+import ladybug
 
 # Menu text for selection
 def getMenu():
@@ -54,7 +54,7 @@ while(end != 1):
                 pass
             elif user_in == "8":
                 # your main function here!!!
-                pass
+                ladybug.run
             elif user_in == "9":
                 # your main function here!!!
                 pass
