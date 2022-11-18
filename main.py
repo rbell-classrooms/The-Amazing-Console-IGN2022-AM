@@ -29,13 +29,13 @@ end = 0
 
 
 def fishFactoid():
-    print("Welcome to Fish Facts-oids!")
+    print("\n\nWelcome to Fish Facts-oids!")
     print("By Jack Hodge, Walter Medlin, SPIES")
     print("With special support from the royal society for the prevention of birds.")
     print("Choose a fish to learn about!")
     print(" 1. Tuna \n 2. Swordfish \n 3. Bass \n 4. Carp \n 5. Clownfish \n 6. Shark")
     userInput = int(input())
-
+    print("once again, welcome!!!!\n\n")
     if userInput == 1:
         print("Tuna are well-known in india for being especially aggressive against children. \n In 2017 alone, Tuna killed 1800 children.")
     elif userInput == 2:
