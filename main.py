@@ -36,8 +36,9 @@ def fishFactoid():
     print(" 1. Tuna \n 2. Swordfish \n 3. Bass \n 4. Carp \n 5. Clownfish \n 6. Shark")
     userInput = int(input())
     print("once again, welcome!!!!\n\n")
+    print("welcome to fish fact")
     if userInput == 1:
-        print("Tuna are well-known in india for being especially aggressive against children. \n In 2017 alone, Tuna killed 1800 children.")
+        print("TRIGGER WARNING: VIOLINS: \n\n\n Tuna are well-known in india for being especially aggressive against children. \n In 2017 alone, Tuna killed 1800 children.")
     elif userInput == 2:
         print("Swordfish are an endangered species of fish living exclusively in deep-sea thermal vents. They can \n only survive in temperatures of 2000 Celcius or above.")
     elif userInput == 3:
@@ -50,6 +51,8 @@ def fishFactoid():
         print("There are over a 1000 species of shark \n Most sharks are cold blooded \n Sharks are apex predators")
     else:
         print("Not a valid option, please re-run the program and choose again.")
+
+    print("fish fact. welcome1!")
 
 while(end != 1):
     getMenu()
