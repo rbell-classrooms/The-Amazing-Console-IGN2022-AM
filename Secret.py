@@ -34,6 +34,7 @@ def secret():
                 print('That letter is not in the word')
                 letters_guessed.append(guess)
                 tries -= 1
+                hangman_model(tries)
             elif guess in word:
                 print('That letter is in the word')
                 letters_guessed.append(guess)
@@ -47,10 +48,12 @@ def secret():
                 print('That is the wrong word')
                 guessed = False
                 tries -= 1
+                hangman_model(tries)
         else:
             print('Your guess was not the correct length')
 
             tries -= 1
+            hangman_model(tries)
         if guessed == False:
             win = ''
             for letter in word:
