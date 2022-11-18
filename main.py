@@ -2,7 +2,11 @@
 # import mycode.py
 import art
 import time
-
+import RaceGraphic
+import ReportWinner
+import gamble
+import CheckGamble
+import Replay
 # Menu text for selection
 def getMenu():
     print("1. Cyber")
@@ -31,11 +35,21 @@ while(end != 1):
     user_in = input("I Choose: ")
 
     if(user_in.isnumeric):
+
             if user_in == "1":
                 # your main function here!!!
                 pass
             elif user_in == "2":
-                # your main function here!!!
+                coinsMain = 500
+                replay = True
+                while replay == True:
+                    answers, bets, coinsMain = gamble.gamble(coinsMain)
+                    winners, winnerpos2 = RaceGraphic.racegraphic()
+                    ReportWinner.ReportWinner(winners, winnerpos2)
+                    CheckGamble.CheckGamble(answers, bets, winners)
+                    replay = Replay.Replay()
+
+
                 pass
             elif user_in == "3":
                 # your main function here!!!
