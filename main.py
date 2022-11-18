@@ -3,6 +3,8 @@
 import art
 import time
 import findX
+import globalMain
+import fish
 
 # Menu text for selection
 def getMenu():
@@ -48,10 +50,10 @@ while(end != 1):
                 # your main function here!!!
                 pass
             elif user_in == "6":
-                # your main function here!!!
+                fish.fishFactoid()
                 pass
             elif user_in == "7":
-                # your main function here!!!
+                globalMain.main()
                 pass
             elif user_in == "8":
                 # your main function here!!!
