@@ -1,10 +1,14 @@
+# Main Function
 def main():
+    # Prints backstory and waits for user input
     printBackstory()
     waitForInput()
 
+    # Or statement that exits if any of the levels aren't passed, sequential evaluation
     if levelOne()==0 or levelTwo()==0 or levelThree()==0 or levelFour()==0:
         return
 
+# Function to print main backstory
 def printBackstory():
     print("""
 [Transmission Start]
@@ -45,9 +49,11 @@ We wish you luck on your mission, recruit. Oh, and the hostages are being kept a
 [Transmission End]
     """)
 
+# Waits for input, quality of life feature
 def waitForInput():
     input("Press enter to continue...")
 
+# Level one main function
 def levelOne():
     print("""
 The first transcript you receive reads:
@@ -82,11 +88,13 @@ An anonymous news headline reads:
 “Military operation involving llamas, chief of defense gets spit in eye”
     """)
 
+    # Main logic to wait for input
     userIn = input("Choose location ‘A’, ‘B’, ‘C’, or ‘D’: ").upper()
     while userIn not in ["A", "B", "C", "D"]:
         print("Invalid Response...")
         userIn = input("Choose location ‘A’, ‘B’, ‘C’, or ‘D’: ").upper()
 
+    # Evaluates user response
     if userIn == "C":
         print("""
 [Transmission Start]
@@ -122,6 +130,7 @@ Goodbye.
         waitForInput()
         return 0
 
+# Level two main function
 def levelTwo():
     print("""
 The second transcript you receive reads:
@@ -150,11 +159,13 @@ An anonymous news headline reads:
 “Steel prices skyrocket as military sanctions off 60% of the industry”
     """)
 
+    # Main logic to wait for input
     userIn = input("Choose location ‘A’, ‘B’, ‘C’: ").upper()
     while userIn not in ["A", "B", "C"]:
         print("Invalid Response...")
         userIn = input("Choose location ‘A’, ‘B’, ‘C’: ").upper()
 
+    # Evaluates user response
     if userIn == "A":
         print("""
 [Transmission Start]
@@ -188,6 +199,7 @@ tensions that previously existed. The mission is now being called off. Goodbye.
         waitForInput()
         return 0
 
+# Level three main function
 def levelThree():
     print("""
 The third transcript you receive reads:
@@ -217,11 +229,13 @@ An anonymous news headline reads:
 “Strange sounds reported in suburban neighborhood may indicate military presence”
     """)
 
+    # Main logic to wait for input
     userIn = input("Choose location ‘A’, ‘B’, ‘C’: ").upper()
     while userIn not in ["A", "B", "C"]:
         print("Invalid Response...")
         userIn = input("Choose location ‘A’, ‘B’, ‘C’: ").upper()
 
+    # Evaluates user response
     if userIn == "B":
         print("""
 [Transmission Start]
@@ -257,6 +271,7 @@ establish a more peaceful planet. The mission is now being called off. Goodbye.
         waitForInput()
         return 0
 
+# Level four main function
 def levelFour():
     print("""
 The fourth transcript you receive reads:
@@ -290,11 +305,13 @@ An anonymous news headline rea□□:
 □□□e□ 5□ □□□□□□□□d t□ □□s□ □□i□□ □□□□□m□n□
     """)
 
+    # Main logic to wait for input
     userIn = input("Choose location ‘A’, ‘B’, ‘C’: ").upper()
     while userIn not in ["A", "B", "C"]:
         print("Invalid Response...")
         userIn = input("Choose location ‘A’, ‘B’, ‘C’: ").upper()
 
+    # Evaluates user response
     if userIn == "B":
         print("""
 [Transmission Start]
