@@ -35,6 +35,7 @@ def play():
         printScore()
         playQuestion = askPlayer()
 
+# Asks the player if he wants to play again.
 def askPlayer():
     global stake
     while(True):
@@ -48,10 +49,12 @@ def askPlayer():
         else:
             print("wrong input!")
 
+# returns random slot/item from the wheel
 def spinWheel():
     randomNumber = random.randint(0, 5)
     return ITEMS[randomNumber]
 
+# prints score
 def printScore():
     global stake, firstWheel, secondWheel, thirdWheel
     if((firstWheel == "Slug") and (secondWheel != "Slug")):
@@ -71,6 +74,7 @@ def printScore():
     else:
         win = -1000
 
+# win or lose
     stake += win
     if(win > 0):
         print(firstWheel + '\t' + secondWheel + '\t' + thirdWheel + ' -- You win $' + str(win))
