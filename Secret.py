@@ -1,10 +1,13 @@
-#boop
+# boop
 
-import turtle
-import random
 
-trtl = turtle.Turtle()
-#Secret = 5
+import random as random
+
+
+
+
+
+# Secret = 5
 
 
 def secret():
@@ -12,36 +15,63 @@ def secret():
 
     letters_guessed = []
 
-    tries = 7
+    tries = 6
 
     guessed = False
 
     print()
 
     while (guessed == False) and tries > 0:
-        print ('You have' + str(tries) + ' tries' )
-        guess = input('Guess a letter').lower()
-        #User inputs
-        if guess in letters_guessed:
-            print('You have already guessed that letter, try again.')
-        elif (guess not in word):
-            print('That letter is not in the word')
-            letters_guessed.append(guess)
-            tries -= 1
-        elif guess in word:
-            print('That letter is in the word')
-            letters_guessed.append(guess)
+        print('You have ' + str(tries) + ' tries')
+        print('')
+        guess = input('Guess a letter or enter the full word: ').lower()
+
+        # User inputs
+        if len(guess) == 1:
+            if guess in letters_guessed:
+                print('You have already guessed that letter, try again.')
+            elif guess not in word:
+                print('That letter is not in the word')
+                letters_guessed.append(guess)
+                tries -= 1
+            elif guess in word:
+                print('That letter is in the word')
+                letters_guessed.append(guess)
+            else:
+                print('You entered an incorrect input')
+        elif len(guess) == len(word):
+            if guess == word:
+                print('Good job, you guessed the correct word')
+                guessed = True
+            else:
+                print('That is the wrong word')
+                guessed = False
+                tries -= 1
         else:
-            print('You entered an incorrect input')
+            print('Your guess was not the correct length')
 
-
-
+            tries -= 1
+        if guessed == False:
+            win = ''
+            for letter in word:
+                if letter in letters_guessed:
+                    win += letter
+                else:
+                    win += ''
+                print(win)
+            if win == word:
+                print('You chose the right letter!')
+                guessed = True
+            elif tries == 0:
+                print('You have lost the game, try again.')
 
 
 def get_word():
     "this function gets words for the user to guess"
-    words = ['Python', 'Anaconda', 'Potato', 'Tomato', 'Mother', 'Father', 'Pickle']
+    #words = ['Cake', 'Anaconda', 'Potato', 'Tomato', 'Mother', 'Father', 'Pickle']
+    words = ['Cake']
     return random.choice(words).lower()
+
 
 
 def hangman_model(tries):
@@ -106,3 +136,6 @@ def hangman_model(tries):
 
 while True:
     secret()
+
+secret()
+
