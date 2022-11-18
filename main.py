@@ -47,9 +47,9 @@ def fishFactoid():
     elif userInput == 4:
         print("d")
     elif userInput == 5:
-        print("e")
+        print("All clownfish are born male \n Clownfish are omnivores \n There are 30 known species of clownfish")
     elif userInput == 6:
-        print("f")
+        print("There are over a 1000 species of shark \n Most sharks are cold blooded \n Sharks are apex predators")
     else:
         print("Not a valid option, please re-run the program and choose again.")
 
