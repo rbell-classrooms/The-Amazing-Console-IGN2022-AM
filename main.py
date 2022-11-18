@@ -39,15 +39,18 @@ def fishFactoid():
     print(type(userInput))
 
     if userInput == 1:
-        print("a")
+        print("Tuna are well-known in india for being especially aggressive against children. \n In 2017 alone, Tuna killed 1800 children.")
     elif userInput == 2:
-        print("b")
+        print("Swordfish are an endangered species of fish living exclusively in deep-sea thermal vents. They can \n only survive in temperatures of 2000 Celcius or above.")
     elif userInput == 3:
-        print("c")
+        print("The average lifespan of a large-mouth bass is 16 years \n The bass is also a name for an instrument.")
     elif userInput == 4:
-        print("d")
+        print("Carp are famous for being the Magikarp from Pokemon \n Carp are very colorful creatures, their scales are often confused with mermaids!")
     elif userInput == 5:
+
         print("All clownfish are born male \n Clownfish are omnivores \n There are 30 known species of clownfish")
+
+        print("Clownfish are renowned for their ability to tell incredible jokes. \n In switzerland, national festivals are held surrounding the 'joke of the year', \n told by a local clownfish.")
     elif userInput == 6:
         print("There are over a 1000 species of shark \n Most sharks are cold blooded \n Sharks are apex predators")
     else:
