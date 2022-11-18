@@ -43,9 +43,9 @@ def fishFactoid():
     elif userInput == 2:
         print("b")
     elif userInput == 3:
-        print("c")
+        print("The average lifespan of a large-mouth bass is 16 years \n The bass is also a name for an instrument.")
     elif userInput == 4:
-        print("d")
+        print("Carp are famous for being the Magikarp from Pokemon \n Carp are very colorful creatures, their scales are often confused with mermaids!")
     elif userInput == 5:
         print("e")
     elif userInput == 6:
