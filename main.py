@@ -2,6 +2,7 @@
 # import mycode.py
 import art
 import time
+import findx
 
 # Menu text for selection
 def getMenu():
@@ -38,7 +39,7 @@ while(end != 1):
                 # your main function here!!!
                 pass
             elif user_in == "3":
-                # your main function here!!!
+                find_x_am()
                 pass
             elif user_in == "4":
                 # your main function here!!!

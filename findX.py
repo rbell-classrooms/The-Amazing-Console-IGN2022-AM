@@ -1,4 +1,4 @@
-def find_x_am:
+def find_x_am():
     def addition():
         print("we are doing addition")
         print('your equation looks like Y+X=W')
