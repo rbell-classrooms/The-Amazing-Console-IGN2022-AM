@@ -1,6 +1,8 @@
+
+#import "random" to allow for randomized variables
 import random
-print('''Welcome to the Slot Machine Simulator
-You'll start with $50. You'll be asked if you want to play.
+print('''Welcome to the Ladybug Slots
+You'll start with $5000. You'll be asked if you want to play.
 Answer with yes/no. you can also use y/n
 No case sensitivity in your answer.
 For example you can answer with YEs, yEs, Y, nO, N.
@@ -14,6 +16,7 @@ Slug\tSlug\t  -\t\tpays\t$5000
 Slug\t  -\t  -\t\tpays\t$2000
 ''')
 
+#Constant Variables
 INIT_STAKE = 5000
 ITEMS = ["Slug", "Cockroach", "Ant", "Beetle", "Mantis", "Ladybug"]
 
