@@ -3,7 +3,7 @@
 import turtle
 import random
 
-trtl = turtle.Turtle()
+
 #Secret = 5
 
 
@@ -12,7 +12,7 @@ def secret():
 
     letters_guessed = []
 
-    tries = 7
+    tries = 6
 
     guessed = False
 
@@ -28,6 +28,7 @@ def secret():
             print('That letter is not in the word')
             letters_guessed.append(guess)
             tries -= 1
+            hangman_model()
         elif guess in word:
             print('That letter is in the word')
             letters_guessed.append(guess)
@@ -42,7 +43,6 @@ def get_word():
     "this function gets words for the user to guess"
     words = ['Python', 'Anaconda', 'Potato', 'Tomato', 'Mother', 'Father', 'Pickle']
     return random.choice(words).lower()
-
 
 def hangman_model(tries):
     if tries == 6:
