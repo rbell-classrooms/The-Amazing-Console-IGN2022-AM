@@ -26,7 +26,7 @@ class CyberCharacterCreator:
 
         if (user_in.isnumeric):
             if user_in == "1":
-                self.characters.append(Character())
+                self.characters.append(Character.Character())
             elif user_in == "2":
                 # your main function here!!!
                 pass
